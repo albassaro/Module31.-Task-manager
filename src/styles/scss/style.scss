@@ -1,0 +1,221 @@
+// Шрифт заголовков колонок, текста задач и кнопок
+%ElemsFontInColumns{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+// Шрифт заголовков приветствий пользователей
+%titlesBoardFont{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-light {
+    background-color: rgb(69, 168, 226) !important;
+
+    .navbar-collapse{
+
+        .disabled{
+            display: none !important;
+        }
+    }
+    
+    .user-info{
+        display: flex;
+        margin-right: 30px;
+
+        img {
+            border-radius: 20px;
+        }
+        .dropdown{
+            display: flex;
+            height: 40px;
+            line-height: 40px;
+            margin: 0px;
+            text-align: center;
+            
+            .user-name{
+                margin-left: 20px;
+                cursor: default;
+                color: white;
+                width: fit-content;
+                @extend %ElemsFontInColumns;
+            }
+            
+            .dropdown-toggle{
+                margin-left: 5px;
+                vertical-align: middle;
+                
+                .dropdown-arrow-click{
+                    cursor: pointer;
+                }
+                
+            }
+
+            .dropdown-menu{
+                border-radius: 10px;
+                top: 110%;
+                right: 10%;
+                padding: 0px;
+
+                .dropdown-item{
+                    @extend %ElemsFontInColumns;
+
+                    &:hover{
+                        border-radius: 10px;
+                        background-color: rgba(145, 200, 221, 0.568);
+                    }
+
+                    &:active, &:focus{
+                        border-radius: 10px;
+                    }
+                }
+                
+                
+            }
+            .show {
+                display: block;
+            }
+        }
+        
+        .user-logOut{
+            @extend %ElemsFontInColumns;
+            margin: auto auto auto 40px;
+            border: none;
+            height: fit-content;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+        }
+        
+    }
+}
+
+
+#app-login-btn {
+    width: 160px;
+}
+
+.kenban-board{
+
+    .board-title-admin{
+        margin-bottom: 70px !important;
+    }
+    .board-title,.board-title-admin{
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 10px;
+        margin-bottom: 30px;
+        white-space: pre-wrap;
+        @extend %titlesBoardFont;
+    }
+    .tasks-count{
+        padding-top: 0px;
+        margin-left: 220px;
+        text-align: left;
+        border-radius: 5px;
+        height: fit-content;
+        width: fit-content;
+
+        h5{
+            @extend %ElemsFontInColumns;
+            margin-bottom: 20px;
+        }
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+        column-gap: 100px;
+        row-gap: 60px;
+        justify-content: center;
+        align-items: start;
+        margin: 40px 80px 290px;
+
+        .board-column{
+            background-color: rgb(231, 232, 238);
+            border-radius: 12px;
+            text-align: right;
+
+            .task-title{
+                @extend %ElemsFontInColumns;
+                margin-top: 10px;
+                margin-left: 15px;
+                padding: 15px 15px 5px 15px;
+                text-align: left;
+                
+            }
+
+            .board-dropzone {
+                height: 10px;
+                transition: background 0.15s, height 0.15s;
+            }
+           
+            .board-dropzone--active {
+                height: 20px;
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+            }
+
+            .tasks-column{
+                margin: auto 30px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                
+                .tasks-list{
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+
+                    textarea{
+                        @extend %ElemsFontInColumns;
+                        overflow: hidden;
+                        overflow-wrap: break-word;
+                        resize:none;
+                        width: auto;
+                        border-radius: 5px;
+                        height: 40px;
+                        padding: 5px 7px;
+                        cursor: move;
+                    }
+                }   
+            } 
+            
+            
+            .selected{
+                opacity: 0.6;
+            }
+
+            .task-button{
+                display: inline-block;
+
+                .task-add, .task-submit{
+                    @extend %ElemsFontInColumns;
+                    border: none;
+                    padding: 5px;
+                    margin-bottom: 15px;
+                    margin-right: 30px;
+                    background-color:rgb(231, 232, 238);
+
+                    &:hover{
+                        border: 2px solid rgb(46, 109, 94);
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+                               
+                .disable{
+                    display: none;
+                }
+            }  
+        } 
+    }
+}

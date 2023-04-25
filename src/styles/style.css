@@ -1,3 +1,141 @@
+.bg-light .user-info .dropdown .user-name, .bg-light .user-info .dropdown .dropdown-menu .dropdown-item, .bg-light .user-info .user-logOut, .kenban-board .tasks-count h5, .kenban-board .wrapper .board-column .task-title, .kenban-board .wrapper .board-column .tasks-column .tasks-list textarea, .kenban-board .wrapper .board-column .task-button .task-add, .kenban-board .wrapper .board-column .task-button .task-submit {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px; }
+
+.kenban-board .board-title, .kenban-board .board-title-admin {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.bg-light {
+  background-color: #45a8e2 !important; }
+  .bg-light .navbar-collapse .disabled {
+    display: none !important; }
+  .bg-light .user-info {
+    display: flex;
+    margin-right: 30px; }
+    .bg-light .user-info img {
+      border-radius: 20px; }
+    .bg-light .user-info .dropdown {
+      display: flex;
+      height: 40px;
+      line-height: 40px;
+      margin: 0px;
+      text-align: center; }
+      .bg-light .user-info .dropdown .user-name {
+        margin-left: 20px;
+        cursor: default;
+        color: white;
+        width: fit-content; }
+      .bg-light .user-info .dropdown .dropdown-toggle {
+        margin-left: 5px;
+        vertical-align: middle; }
+        .bg-light .user-info .dropdown .dropdown-toggle .dropdown-arrow-click {
+          cursor: pointer; }
+      .bg-light .user-info .dropdown .dropdown-menu {
+        border-radius: 10px;
+        top: 110%;
+        right: 10%;
+        padding: 0px; }
+        .bg-light .user-info .dropdown .dropdown-menu .dropdown-item:hover {
+          border-radius: 10px;
+          background-color: rgba(145, 200, 221, 0.568); }
+        .bg-light .user-info .dropdown .dropdown-menu .dropdown-item:active, .bg-light .user-info .dropdown .dropdown-menu .dropdown-item:focus {
+          border-radius: 10px; }
+      .bg-light .user-info .dropdown .show {
+        display: block; }
+    .bg-light .user-info .user-logOut {
+      margin: auto auto auto 40px;
+      border: none;
+      height: fit-content;
+      background-color: rgba(0, 0, 0, 0);
+      color: white; }
+
 #app-login-btn {
-  width: 160px;
-}
+  width: 160px; }
+
+.kenban-board .board-title-admin {
+  margin-bottom: 70px !important; }
+
+.kenban-board .board-title, .kenban-board .board-title-admin {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  white-space: pre-wrap; }
+
+.kenban-board .tasks-count {
+  padding-top: 0px;
+  margin-left: 220px;
+  text-align: left;
+  border-radius: 5px;
+  height: fit-content;
+  width: fit-content; }
+  .kenban-board .tasks-count h5 {
+    margin-bottom: 20px; }
+
+.kenban-board .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+  column-gap: 100px;
+  row-gap: 60px;
+  justify-content: center;
+  align-items: start;
+  margin: 40px 80px 290px; }
+  .kenban-board .wrapper .board-column {
+    background-color: #e7e8ee;
+    border-radius: 12px;
+    text-align: right; }
+    .kenban-board .wrapper .board-column .task-title {
+      margin-top: 10px;
+      margin-left: 15px;
+      padding: 15px 15px 5px 15px;
+      text-align: left; }
+    .kenban-board .wrapper .board-column .board-dropzone {
+      height: 10px;
+      transition: background 0.15s, height 0.15s; }
+    .kenban-board .wrapper .board-column .board-dropzone--active {
+      height: 20px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 5px; }
+    .kenban-board .wrapper .board-column .tasks-column {
+      margin: auto 30px;
+      text-align: left;
+      display: flex;
+      flex-direction: column; }
+      .kenban-board .wrapper .board-column .tasks-column .tasks-list {
+        text-align: center;
+        display: flex;
+        flex-direction: column; }
+        .kenban-board .wrapper .board-column .tasks-column .tasks-list textarea {
+          overflow: hidden;
+          overflow-wrap: break-word;
+          resize: none;
+          width: auto;
+          border-radius: 5px;
+          height: 40px;
+          padding: 5px 7px;
+          cursor: move; }
+    .kenban-board .wrapper .board-column .selected {
+      opacity: 0.6; }
+    .kenban-board .wrapper .board-column .task-button {
+      display: inline-block; }
+      .kenban-board .wrapper .board-column .task-button .task-add, .kenban-board .wrapper .board-column .task-button .task-submit {
+        border: none;
+        padding: 5px;
+        margin-bottom: 15px;
+        margin-right: 30px;
+        background-color: #e7e8ee; }
+        .kenban-board .wrapper .board-column .task-button .task-add:hover, .kenban-board .wrapper .board-column .task-button .task-submit:hover {
+          border: 2px solid #2e6d5e;
+          border-radius: 5px;
+          cursor: pointer; }
+      .kenban-board .wrapper .board-column .task-button .disable {
+        display: none; }
